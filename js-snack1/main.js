@@ -40,6 +40,8 @@ $(document).ready(function() {
 
     ];
 
+    var lightestBike = [];
+
 // Uso il ciclo for per scorrere ogni oggetto
 
     for (var i = 0; i < bike.length; i++) {
@@ -57,13 +59,16 @@ $(document).ready(function() {
 
         };
 
-        var risultato = getMaxOfArray(weight);
+        // var risultato = getMaxOfArray(weight);
 
         console.log(weight);
 
-        console.log(risultato);
+        // console.log(risultato);
+
+        lightestBike.push(weight);
     };
 
+    console.log(lightestBike);
 
     function getMaxOfArray(numArray) {
         return Math.max.apply(null, numArray);
