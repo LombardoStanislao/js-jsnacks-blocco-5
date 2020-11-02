@@ -3,3 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
