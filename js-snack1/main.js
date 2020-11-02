@@ -40,39 +40,39 @@ $(document).ready(function() {
 
     ];
 
-    var lightestBike = [];
-
 // Uso il ciclo for per scorrere ogni oggetto
+
+    var min = bike[0].Weight;
+    var oggettoMin = bike[0];
 
     for (var i = 0; i < bike.length; i++) {
 
 //Creo una variabile di appoggio per ogni oggetto
 
         var currentBike = bike[i];
-// Ciclo for in, per recuperare da ogni oggetto le proprietà
 
-        for (var key in currentBike) {
-
-            var weight = currentBike['Weight'];
-
-
-
-        };
+        var weight = currentBike['Weight'];
 
         // var risultato = getMaxOfArray(weight);
 
-        console.log(weight);
+        console.log('peso da verificare', weight);
 
-        // console.log(risultato);
+        if (weight < min) {
 
-        lightestBike.push(weight);
+            min = weight;
+            oggettoMin = currentBike;
+        }
     };
 
-    console.log(lightestBike);
+    for (var key in oggettoMin) {
 
-    function getMaxOfArray(numArray) {
-        return Math.max.apply(null, numArray);
+        $('#light-bike').append(key + ": " + oggettoMin[key] + ' ');
     }
+
+
+
+    console.log(min);
+    console.log(oggettoMin);
 
 
 
