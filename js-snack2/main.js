@@ -21,8 +21,12 @@ $(document).ready(function() {
         if ((i >= firstUserNumber) && (i <= secondUserNumber)) {
 
             console.log(names[i-1]);
+
+            chosenName.push(names[i-1])
         }
     }
+
+    console.log(chosenName);
 
 
 
