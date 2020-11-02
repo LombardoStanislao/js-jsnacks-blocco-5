@@ -51,14 +51,23 @@ $(document).ready(function() {
 
         for (var key in currentBike) {
 
-            var peso = currentBike['Weight'];
+            var weight = currentBike['Weight'];
 
 
 
         };
 
-        console.log(peso);
+        var risultato = getMaxOfArray(weight);
+
+        console.log(weight);
+
+        console.log(risultato);
     };
+
+
+    function getMaxOfArray(numArray) {
+        return Math.max.apply(null, numArray);
+    }
 
 
 
